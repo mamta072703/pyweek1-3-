@@ -1,0 +1,295 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: #f1f5f9;
+}
+
+.header {
+    background: #17243a;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #94a3b8;
+}
+
+.container {
+    width: 95%;
+    max-width: 1150px;
+    margin: 30px auto;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    margin-bottom: 10px;
+}
+
+.intro p,
+.instructions p {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: #1e293b;
+    color: white;
+}
+
+.instructions,
+.algorithm-info {
+    background: #1e293b;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 11px 16px;
+    background: #334155;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #475569;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tool.active {
+    background: #2563eb;
+}
+
+.primary {
+    background: #16a34a;
+}
+
+.primary:hover {
+    background: #15803d;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+}
+
+.legend-box {
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+}
+
+.start {
+    background: #22c55e;
+}
+
+.goal {
+    background: #ef4444;
+}
+
+.wall {
+    background: #475569;
+}
+
+.explored {
+    background: #38bdf8;
+}
+
+.path {
+    background: #facc15;
+}
+
+.maze-section {
+    background: #1e293b;
+    padding: 18px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.maze-grid {
+    display: grid;
+    width: fit-content;
+    margin: auto;
+    gap: 2px;
+    user-select: none;
+}
+
+.cell {
+    width: 25px;
+    height: 25px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+.cell.wall {
+    background: #475569;
+}
+
+.cell.start {
+    background: #22c55e;
+}
+
+.cell.goal {
+    background: #ef4444;
+}
+
+.cell.explored {
+    background: #38bdf8;
+}
+
+.cell.path {
+    background: #facc15;
+}
+
+.cell.start,
+.cell.goal,
+.cell.wall {
+    cursor: pointer;
+}
+
+.status {
+    background: #1e293b;
+    border-left: 4px solid #38bdf8;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.status.success {
+    border-color: #22c55e;
+}
+
+.status.error {
+    border-color: #ef4444;
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: #1e293b;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.stat-card h3 {
+    font-size: 25px;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.algorithm-info h2 {
+    margin-bottom: 15px;
+}
+
+.algorithm-info p {
+    color: #cbd5e1;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.formula {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    border-top: 1px solid #334155;
+}
+
+@media (max-width: 650px) {
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cell {
+        width: 17px;
+        height: 17px;
+    }
+
+    .maze-section {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+}
